@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulaire de livraison</title>
+		<link rel = "stylesheet" type="text/css" <!--href = "css/style.css"-->
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>Formulaire de commande</h1>
+		<!-- action : action="valider.php" ramène sur une autre page !! -->
+		<form id="commande" method="post" onsubmit="return verifForm(this)">
+			<fieldset>
+				<legend>Formulaire de livraison</legend> <br>
+				<label>Nom du produit</label>				
+					<select id="nomProduit" name="nomProduit" type="text" onblur="TraiterNomProduit(this)">
+					<option value="iPhone 5">iphone 5</option>
+					<option value="iPhone 6">iPhone 6</option>
+					<option value="iPhone 7">iPhone 7</option>
+					<!-- Je n'ai pas réussi à récupérer les valeurs de l'objet pour les placer dans le swelect !!!!!-->
+					</select>
+				<br><br>
+				<label>Quantitée</label> <input id="qte" name="qte" type="number"  value="1" min="1" max="1000" onblur="traiterQte(this)"></input> <br><br>
+				<label>Nom du Client</label> <input id="nomClient" name="nomClient" type="text" onblur="verifNom(this)"></input> <br><br>
+				<label>Adresse courriel</label> <input id="mail" name="mail" type="email" onblur="verifMail(this)"></input><br><br>
+				<label>Adresse de livraison</label><textarea id="adresse" rows=5></textarea><br><br>
+				
+				<label>Sous-total : </label> <label style="background-color: yellow;" id="lblSoustotal"></label> <!--<input id="soustotal" name="soustotal" type="number"></input>--> <br><br>
+				<label>Taxes :</label> <label style="background-color: yellow;" id="lblTaxe"></label> <br><br>
+				<label>Total :</label> <label style="background-color: yellow;" id="lblTotal"></label> <br><br>
+		
+
+				<input type="submit" value="Valider">
+			</fieldset>
+		</form>
+
+	</body>
+</html>

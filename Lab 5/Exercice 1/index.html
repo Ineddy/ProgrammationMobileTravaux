@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Formulaire d'inscription au forum</title>
+		<link rel = "stylesheet" type="text/css"/> <!--href = "css/style.css"-->
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>Formulaire d'inscription au forum</h1>
+		<!-- action : action="valider.php" ramène sur une autre page !! -->
+		<form id="inscription" method="post" onsubmit="return verifForm(this)">
+			<fieldset>
+				<legend>Formulaire d'inscription</legend> <br>
+				<label>Nom d'utilisateur</label> <input id="nomUtilisateur" name="nomUtilisateur" type="text" onblur="verifNom(this)"></input> <br><br>
+				<label>Mot de passe</label> <input id="mdp" name="mdp" type="password" onblur="verifNom(this)"></input> <br><br>
+				<label>Confirmation MDP</label> <input id="ConfMDP" name="ConfMDP" type="password" onblur="veriPSW2(this)"></input> <br><br>
+				<label>Nom</label> <input id="nom" name="nom" type="text" onblur="verifNom(this)"></input> <br><br>
+				<label>Prénom</label>  <input id="preNom" name="preNom" type="text" onblur="verifNom(this)"></input> <br><br>
+				<label>Adresse courriel</label> <input id="mail" name="mail" type="email" onblur="verifMail(this)"></input><br><br>
+				<label>Confirmation courriel </label> <input id="mail2" name="mail2" type="email" onblur="verifMail2(this)"></input><br><br>
+				<input type="submit" value="Valider">
+			</fieldset>
+		</form>
+		<form id="connexion" method="post" onsubmit="return moduleConnexion(this)">
+			<fieldset>
+				<legend>Formulaire de connexion</legend><br>
+				<label>Nom d'utilisateur</label> <input id="nomUtilisateur" name="nomUtilisateur" type="text" onblur=EnrNomUser(this)> <br><br>
+				<label>Mot de passe</label> <input id="mdp" name="mdp" type="password" onblur=EnrPSWUser(this)></input> <br><br>
+				<input type="submit" value="Valider">
+			</fieldset>
+			
+		</form>
+	</body>
+</html>
